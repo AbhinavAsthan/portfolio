@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abhinav Asthana — Web Developer</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#0ea5a4'
+                    },
+                    borderRadius: {
+                        'xl': '14px'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- Toggle Dark Mode -->
+    <button onclick="document.documentElement.classList.toggle('dark')"
+        class="fixed right-4 top-4 bg-accent text-white px-4 py-2 rounded-xl shadow-lg">
+        Toggle Theme
+    </button>
+
+    <div class="max-w-6xl mx-auto px-6 py-8">
+
+        <!-- Header -->
+        <header class="flex justify-between items-center py-4">
+            <h1 class="text-2xl font-bold">Abhinav Asthana</h1>
+            <nav class="space-x-6 hidden md:block">
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#projects" class="hover:text-accent transition">Projects</a>
+                <a href="#skills" class="hover:text-accent transition">Skills</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
+            </nav>
+        </header>
+
+        <!-- HERO Section -->
+        <section class="grid md:grid-cols-2 gap-10 items-center py-12">
+            <div class="space-y-4 animate-fadeInUp">
+                <h2 class="text-4xl font-bold">Hi, I’m Abhinav — Web Developer</h2>
+                <p class="text-gray-600 dark:text-gray-300 text-lg">I build fast, accessible and SEO‑friendly web
+                    experiences using modern technologies.</p>
+                <a href="#projects"
+                    class="inline-block bg-accent text-white px-6 py-3 rounded-xl shadow-md hover:scale-105 transition-transform">View
+                    Projects</a>
+            </div>
+
+            <img src="p1.jpg" alt="Abhinav"
+                class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500">
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-12 animate-fadeInUp">
+            <h2 class="text-3xl font-semibold mb-3">About Me</h2>
+            <p class="text-gray-600 dark:text-gray-300 max-w-3xl">
+                I'm a full-stack web developer specializing in React, Node.js, and modern UI design. I focus on
+                performance, accessibility, and building digital products that feel smooth and modern on every device.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-12 animate-fadeInUp">
+            <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card -->
+                <div
+                    class="bg-gray-100 dark:bg-gray-800 p-5 rounded-xl shadow hover:shadow-xl hover:-translate-y-2 transition-all">
+                    <h3 class="text-xl font-semibold mb-2">E-commerce Website</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Built with React + Node.js with optimized performance &
+                        cart system.</p>
+                    <a href="#" class="text-accent font-medium inline-block mt-3 hover:underline">Read More →</a>
+                </div>
+
+                <!-- Project Card -->
+                <div
+                    class="bg-gray-100 dark:bg-gray-800 p-5 rounded-xl shadow hover:shadow-xl hover:-translate-y-2 transition-all">
+                    <h3 class="text-xl font-semibold mb-2">SaaS Dashboard</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Analytics dashboard with dark mode & charts. Built using
+                        Next.js.</p>
+                    <a href="#" class="text-accent font-medium inline-block mt-3 hover:underline">Read More →</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-12 animate-fadeInUp">
+            <h2 class="text-3xl font-semibold mb-4">Skills</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform">
+                    JavaScript / TypeScript</div>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform">
+                    React / Next.js</div>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform">
+                    Node.js / Express</div>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform">
+                    TailwindCSS / UI Design</div>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform">
+                    MongoDB / SQL</div>
+                <div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition-transform">SEO
+                    / Performance</div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-12 animate-fadeInUp">
+            <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+            <form class="max-w-lg space-y-4">
+                <input type="text" placeholder="Your Name"
+                    class="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700">
+                <input type="email" placeholder="Email Address"
+                    class="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700">
+                <textarea rows="4" placeholder="Message"
+                    class="w-full p-3 rounded-xl bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700"></textarea>
+                <button class="bg-accent text-white px-6 py-3 rounded-xl hover:scale-105 transition-transform">Send
+                    Message</button>
+            </form>
+        </section>
+
+        <footer
+            class="text-center py-6 text-gray-500 dark:text-gray-400 border-t border-gray-300 dark:border-gray-700 mt-8">
+            © 2025 Abhinav Asthana — All rights reserved.
+        </footer>
+
+    </div>
+
+    <!-- Animations -->
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+
+</body>
+
+</html>
